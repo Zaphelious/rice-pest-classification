@@ -1,7 +1,7 @@
 .venv
 Finalized_datasets
 datasets
-training_history.csv
-training_history_standard.csv
 models
 experimental_pipeline
+unrelated_data
+training_results
