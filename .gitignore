@@ -1,14 +1,6 @@
 .venv
 Finalized_datasets
 datasets
-models
-experimental_pipeline
-unrelated_data
-training_results
-evaluation_results
-experiment_models
-selected_models
-new_models
-Knn_expreiment
-gan_results
-stacking_result
+MobileNetv2_result
+old
+black
