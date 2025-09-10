@@ -3,14 +3,13 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import os
 
-def plot_training_result(*results):
+def plot_training_result(result):
 
     full_training_loss = []
     full_validation_loss = []
 
-    for result in results:
-        full_training_loss.extend(result.get('train_loss', []))
-        full_validation_loss.extend(result.get('validation_loss', []))
+    full_training_loss.extend(result.get('train_loss', []))
+    full_validation_loss.extend(result.get('validation_loss', []))
 
     total_epochs = len(full_training_loss)
 
@@ -70,13 +69,12 @@ def plot_historical_results(file_name):
 
     plt.show()
 
-def plot_accuracy(*results):
+def plot_accuracy(results):
 
     full_accuracy = []
 
-    for res in results:
-        accuracy = res.get('accuracy', [])
-        full_accuracy.extend(accuracy)
+    accuracy = results.get('accuracy', [])
+    full_accuracy.extend(accuracy)
 
     total_epochs = len(full_accuracy)
 
