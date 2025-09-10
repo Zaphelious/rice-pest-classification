@@ -9,8 +9,7 @@ def plot_training_result(*results):
     full_validation_loss = []
 
     for result in results:
-        train_loss = result.get('train_loss', [])
-        full_training_loss.extend(train_loss)
+        full_training_loss.extend(result.get('train_loss', []))
         full_validation_loss.extend(result.get('validation_loss', []))
 
     total_epochs = len(full_training_loss)
@@ -98,7 +97,7 @@ def plot_accuracy(*results):
     plt.grid(True)
     plt.show()
 
-def save_historical_data(history, filename):
+def save_historical_data(history, filename='MobileNetv2_result/hyper_parameter_tuning/model1.csv'):
 
     training_loss = history.get('train_loss', [])
     test_loss = history.get('validation_loss', [])
@@ -126,6 +125,8 @@ def save_historical_data(history, filename):
     combined_data.to_csv(filename, index=False)
 
     print("Historical data saved successfully!")
+
+
 
 import cv2
 from torchvision import datasets
